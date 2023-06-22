@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+    <title>Mathematical Site</title>
+    <script>
+        function add() {
+            var num1 = Number(document.getElementById("val1").value);
+            var num2 = Number(document.getElementById("val2").value);
+            var ans = num1+num2;
+            alert("The Addition is: "+ans);
+            }
+
+            function mins() {
+            var num1 = Number(document.getElementById("val3").value);
+            var num2 = Number(document.getElementById("val4").value);
+            var ans = num1-num2;
+            alert("The Substraction is: "+ans);
+            }
+
+            function multi() {
+            var num1 = Number(document.getElementById("val5").value);
+            var num2 = Number(document.getElementById("val6").value);
+            var ans = num1*num2;
+            alert("The Multiplication is: "+ans);
+            }
+            
+            function divi() {
+            var num1 = Number(document.getElementById("val7").value);
+            var num2 = Number(document.getElementById("val8").value);
+            var ans = num1/num2;
+            alert("The Division is: "+ans);
+            }
+
+            function squ() {
+            var num = Number(document.getElementById("val9").value);
+            var ans = num**2;
+            alert("The Square of the "+num+" is: "+ans);
+            }
+
+            function cube() {
+            var num = Number(document.getElementById("val9").value);
+            var ans = num**3;
+            alert("The Cube of the "+num+" is: "+ans);
+            }
+
+            function fac(){
+            var f=1;    
+            var i=1;
+            var num=Number(document.getElementById("val09").value);   
+            while(i<=num){
+            f=f*i; 
+            i=i+1;
+            
+            }
+            alert(num+" Factorial is "+f);
+            }
+
+            function pow() {
+            var num1 = Number(document.getElementById("val10").value);
+            var num2 = Number(document.getElementById("val11").value);
+            var ans = num1**num2;
+            alert("The Answer is: "+ans);
+            }
+
+            function pri(){
+            num=Number(document.getElementById("val12").value);
+            var prime=true;
+            for(var i=2; i<num; i=i+1){
+                if(num%i==0){
+                    prime=false;
+                    break;
+                }
+                }
+                if(num<=1){
+                    alert(num+" is not a Prime Number");
+                }
+                else if(prime){
+                    alert(num+" is a Prime Number");
+                }
+                else{
+                    alert(num+" is not a Prime Number");
+                }
+                }
+    </script>
+    <style>
+        body {
+			background-color: greenyellow;
+			font-family: Verdana;
+			text-align: center;
+		}
+        
+        form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+        
+        button {
+			background-color: greenyellow;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+        
+        input {
+            border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mathematical Site</h1> 
+    
+    
+    <form class="content">
+    <div class="add" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Addition:</h3>
+        Enter 1<sup>st</sup> Number: <br> <input type="text" id="val1" placeholder="Enter the Addend"></input><br>
+        Enter 2<sup>nd</sup> Number: <br> <input type="text" id="val2" placeholder="Enter the Addend"></input><br>
+        <button onclick="add()">Make Addition</button>
+    </div>
+    <div class="mins" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Substraction:</h3>
+        Enter 1<sup>st</sup> Number: <br> <input type="text" id="val3" placeholder="Enter the Minuend"></input><br>
+        Enter 2<sup>nd</sup> Number: <br> <input type="text" id="val4" placeholder="Enter the Subtrahend"></input><br>
+        <button onclick="mins()">Make Substraction</button>
+    </div>
+    <div class="multi" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Multiplication:</h3>
+        Enter 1<sup>st</sup> Number: <br>  <input type="text" id="val5" placeholder="Enter the Multiplicant"></input><br>
+        Enter 2<sup>nd</sup> Number: <br> <input type="text" id="val6" placeholder="Enter the Multiplier"></input><br>
+        <button onclick="multi()">Make Multiplication</button>
+    </div>
+    <div class="divi" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Division:</h3>
+        Enter 1<sup>st</sup> Number: <br> <input type="text" id="val7" placeholder="Enter the Dividend"></input><br>
+        Enter 2<sup>nd</sup> Number: <br> <input type="text" id="val8" placeholder="Enter the Divisior"></input><br>
+        <button onclick="divi()">Make Division</button>
+    </div>
+    <div class="squ" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Calculate Square and Cube:</h3>
+        Enter the Number: <br> <input type="text" id="val9" placeholder="Enter the Number"></input><br>
+        <button onclick="squ()">Get Square</button> <button onclick="cube()">Get Cube</button> 
+    </div>
+    <div class="pow" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Calculate Power:</h3>
+        Enter the Number: <br> <input type="text" id="val10" placeholder="Enter the Base"></input><br>
+        Enter the Power Number: <br> <input type="text" id="val11" placeholder="Enter the Exponent"></input><br>
+        <button onclick="pow()">Get Answer</button>
+    </div>
+    <div class="fac" style="text-align: left;
+    margin-bottom: 25px;">
+    <h3>Factorial:</h3>
+    Enter the Number: <br> <input type="text" id="val09" placeholder="Enter the Number"></input><br>
+    <button onclick="fac()">Get Factorial</button>
+    </div>
+    <div class="pri" style="text-align: left;
+    margin-bottom: 25px;">
+        <h3>Check Prime:</h3>
+        Enter the Number: <br> <input type="text" id="val12" placeholder="Enter the Number"></input><br>
+        <button onclick="pri()">Check Prime</button>
+    </div>
+    </form> 
+</body>
+</html>
